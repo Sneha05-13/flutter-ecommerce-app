@@ -1,0 +1,68 @@
+name: ecommerce_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  lottie: ^3.3.2
+  iconsax: ^0.0.8
+
+ # utilities packages
+  intl: ^0.18.1
+  logger: ^2.0.1
+  url_launcher: ^6.1.12
+
+  # Commonly used packages
+  http: ^1.2.2
+  cupertino_icons: ^1.0.8
+  characters: ^1.4.1
+  get: ^4.7.3
+  get_storage: ^2.1.1
+
+
+#-----utilities for splash screen-------
+  flutter_native_splash: ^2.4.7
+  smooth_page_indicator: ^2.0.1
+  carousel_slider: ^5.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+
+# Override transitive dependencies to ensure latest secure versions
+dependency_overrides:
+  characters: 1.4.1
+  test_api: 0.7.7
+
+flutter:
+  uses-material-design: true
+
+
+  #----local assets
+  assets:
+    - assets/fonts/Poppins/
+    - assets/icons/
+    - assets/images/logo-shop.png
+    - assets/animations/
+    - assets/icons/categories/
+    - assets/banners/
+
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Black.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins/Poppins-Italic.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+          weight: 500
+
