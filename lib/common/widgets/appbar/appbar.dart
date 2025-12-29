@@ -23,7 +23,7 @@ class SAppBar extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: RSizes.md),
+      padding: const EdgeInsets.symmetric(horizontal: RSizes.md),
       child: AppBar(
       automaticallyImplyLeading: false,
       leading: showBackArrow 

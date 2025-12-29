@@ -80,12 +80,20 @@ class SProductCardVertical extends StatelessWidget {
                 ],
               ),
 
-              const SizedBox(height: RSizes.spaceBtwItems),
+              
+            ],
+          ),
+         ),
+         //---Spacer
+         const Spacer(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   //--price
-                  const SProductPriceText(price: '35.0'),
+                  const Padding(
+                  padding: EdgeInsets.only(left: RSizes.sm),
+                  child: SProductPriceText(price: '35.0'),
+                  ),
                   
                   //--add to cart button
                   Container(
@@ -104,9 +112,6 @@ class SProductCardVertical extends StatelessWidget {
                   ),
                 ],
               ),
-            ],
-          ),
-         ),
         ],
       ),
     ),

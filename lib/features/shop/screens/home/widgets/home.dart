@@ -59,6 +59,10 @@ class HomeScreen extends StatelessWidget {
                  RPromoSlider(banners: [RImages.promoBanner1, RImages.promoBanner2, RImages.promoBanner3]),
                  SizedBox(height: RSizes.spaceBtwSections),
 
+                 //--heading
+                 RSectionHeading(title: 'Popular Products', onPressed: () {}),
+                 const SizedBox(height: RSizes.spaceBtwItems),
+
                  
                  ///---Popular products
                  SGridLayout(itemCount: 4, itemBuilder: (_, index) => const SProductCardVertical()),
