@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/common/widgets/appbar/appbar.dart';
+import 'package:ecommerce_app/common/widgets/appbar/tabbar.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce_app/common/widgets/images/circular_image.dart';
@@ -96,24 +97,41 @@ class StoreScreen extends StatelessWidget {
               ),
             ),
             //---Tabs
-            bottom: TabBar(
-              isScrollable: true,
-              indicatorColor: SColors.primary,
-              unselectedLabelColor: SColors.darkGrey,
-              labelColor: SHelperFunctions.isDarkMode(context) ? SColors.white : SColors.primary,
+            bottom: STabBar(
               tabs: [
-              Tab(child: Text('Sports')),
-              Tab(child: Text('Furniture')),
-              Tab(child: Text('Electronics')),
-              Tab(child: Text('Clothes')),
-              Tab(child: Text('Cosmetics')),
+                Tab(child: Text('Sports')),
+                Tab(child: Text('Furniture')),
+                Tab(child: Text('Electronics')),
+                Tab(child: Text('Clothes')),
+                Tab(child: Text('Cosmetics')),
               ],
-              ),
+            ),
           ),
         ];
       },
       //----body
-       body: Container()),
+       body: TabBarView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(RSizes.defaultSpace),
+            child: Column(
+              children: [
+                //---Brands
+                SRoundedContainer(
+                  showBorder: true,
+                  borderColor: SColors.darkGrey,
+                  backgroundColor: Colors.transparent,
+                  margin: const EdgeInsets.only(bottom: RSizes.spaceBtwItems),
+                  child: Column(
+                    
+                  ),
+                ),
+              ],
+            ),
+            ),
+        ],
+        ),
+       ),
     ),
     );
   }
