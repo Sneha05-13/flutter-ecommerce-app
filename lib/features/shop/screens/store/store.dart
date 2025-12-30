@@ -20,7 +20,9 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return DefaultTabController(
+      length: 5,
+    child: Scaffold(
       appBar: SAppBar(
         title: Text('Store', style: Theme.of(context).textTheme.headlineMedium),
         actions: [
@@ -93,9 +95,26 @@ class StoreScreen extends StatelessWidget {
                 ],
               ),
             ),
+            //---Tabs
+            bottom: TabBar(
+              isScrollable: true,
+              indicatorColor: SColors.primary,
+              unselectedLabelColor: SColors.darkGrey,
+              labelColor: SHelperFunctions.isDarkMode(context) ? SColors.white : SColors.primary,
+              tabs: [
+              Tab(child: Text('Sports')),
+              Tab(child: Text('Furniture')),
+              Tab(child: Text('Electronics')),
+              Tab(child: Text('Clothes')),
+              Tab(child: Text('Cosmetics')),
+              ],
+              ),
           ),
         ];
-      }, body: Container()),
+      },
+      //----body
+       body: Container()),
+    ),
     );
   }
 }

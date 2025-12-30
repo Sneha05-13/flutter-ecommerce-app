@@ -27,8 +27,10 @@ class SAppBar extends StatelessWidget implements PreferredSizeWidget{
       child: AppBar(
       automaticallyImplyLeading: false,
       leading: showBackArrow 
-      ? IconButton(onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left))
-      : leadingIcon != null ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) : null,
+      ? IconButton(onPressed: () => Get.back(), icon: const Icon(Iconsax.arrow_left))
+      : leadingIcon != null 
+          ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) 
+          : null,
       title: title,
       actions: actions,
     ),
