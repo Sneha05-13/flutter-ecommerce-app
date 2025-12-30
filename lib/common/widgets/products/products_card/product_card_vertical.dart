@@ -3,6 +3,7 @@ import 'package:ecommerce_app/common/widgets/custom_shapes/containers/rounded_co
 import 'package:ecommerce_app/common/widgets/icons/circular_icons.dart';
 import 'package:ecommerce_app/common/widgets/images/rounded_image.dart';
 import 'package:ecommerce_app/common/widgets/products/products_card/product_price_text.dart';
+import 'package:ecommerce_app/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:ecommerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
@@ -72,13 +73,7 @@ class SProductCardVertical extends StatelessWidget {
             children: [
               RProductTitleText(title: 'Adidas Shoes', smallSize: true),
               SizedBox(height: RSizes.spaceBtwItems / 2),
-              Row(
-                children: [
-                  Text('Adidas', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium),
-                  const SizedBox(width: RSizes.xs),
-                  const Icon(Iconsax.verify5, color: SColors.primary, size: RSizes.iconXs),
-                ],
-              ),
+              SBrandTitleWithVerifiedIcon(title: 'Adidas'),
 
               
             ],

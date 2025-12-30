@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/texts/brand_title_text.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/enums.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';

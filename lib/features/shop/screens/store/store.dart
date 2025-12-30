@@ -2,9 +2,12 @@ import 'package:ecommerce_app/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce_app/common/widgets/images/circular_image.dart';
+import 'package:ecommerce_app/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce_app/common/widgets/products/cart/cart_menu_icon.dart';
+import 'package:ecommerce_app/common/widgets/texts/brand_title_with_verified_icon.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
+import 'package:ecommerce_app/utils/constants/enums.dart';
 import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
@@ -47,22 +50,45 @@ class StoreScreen extends StatelessWidget {
                   RSectionHeading(title: 'Featured Brands', onPressed: (){}),
                   const SizedBox(height: RSizes.spaceBtwItems / 1.5),
 
-                  SRoundedContainer(
+                  SGridLayout(itemCount: 4, mainAxisExtent: 80, itemBuilder: (_, index) {
+                  return GestureDetector(
+                    onTap: (){},
+                      child:  SRoundedContainer(
                     padding: const EdgeInsets.all(RSizes.sm),
                     showBorder: true,
                     backgroundColor: Colors.transparent,
                     child: Row(
                       children: [
                         //---Icon---
-                       RCircularImage(
+                        Flexible(
+                          child: RCircularImage(
                         isNetworkImage: false,
                         image: RImages.clothIcon,
                         backgroundColor: Colors.transparent,
                         overlayColor: SHelperFunctions.isDarkMode(context) ? SColors.white : SColors.black,
                        ),
+                        ),
                        const SizedBox(width: RSizes.spaceBtwItems / 2),
+
+                       //--Text
+                       Expanded(
+                       child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SBrandTitleWithVerifiedIcon(title: 'Adidas', brandTextSize: TextSizes.large),
+                          Text(
+                            '200 products',
+                            overflow: TextOverflow.ellipsis,
+                            style: Theme.of(context).textTheme.labelMedium,
+                          ),
+                        ],
+                       ),
+                       ),
                       ],
                     ),
+                  ),
+                  );
+                  }
                   ),
                 ],
               ),

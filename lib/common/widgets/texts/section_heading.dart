@@ -24,7 +24,7 @@ class RSectionHeading extends StatelessWidget{
         style: Theme.of(context).textTheme.headlineSmall, 
         maxLines: 1, 
         overflow: TextOverflow.ellipsis),
-        if(showActionButton) TextButton(onPressed: onPressed, child: Text('buttonTitle')),
+        if(showActionButton) TextButton(onPressed: onPressed, child: Text('View all')),
       ],
     );
   }
