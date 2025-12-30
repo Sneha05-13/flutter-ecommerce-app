@@ -1,7 +1,6 @@
 import 'package:ecommerce_app/common/widgets/brands/brand_card.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
-import 'package:ecommerce_app/utils/constants/image_strings.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +25,9 @@ class RBrandShowcase extends StatelessWidget {
                     children: [
                       //---Brand with Products Count
                       const RBrandCard(showBorder: false),
+                      const SizedBox(height: RSizes.spaceBtwItems),
+
+                      
                       //---Brand Top 3 Product images
                       Row(children: images.map((image) => brandTopProductImageWidget(image, context)).toList()),
                     ],
