@@ -2,7 +2,7 @@ import 'package:ecommerce_app/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce_app/common/widgets/icons/circular_icons.dart';
 import 'package:ecommerce_app/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce_app/common/widgets/products/products_card/product_card_vertical.dart';
-import 'package:ecommerce_app/features/shop/screens/home/widgets/home.dart';
+import 'package:ecommerce_app/features/shop/screens/home/home.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
