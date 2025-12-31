@@ -1,5 +1,7 @@
+import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:ecommerce_app/utils/device/device_utility.dart';
+import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -22,12 +24,13 @@ class SAppBar extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   Widget build(BuildContext context) {
+    final dark = SHelperFunctions.isDarkMode(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: RSizes.md),
       child: AppBar(
       automaticallyImplyLeading: false,
       leading: showBackArrow 
-      ? IconButton(onPressed: () => Get.back(), icon: const Icon(Iconsax.arrow_left))
+      ? IconButton(onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left, color: dark ? SColors.white : SColors.dark))
       : leadingIcon != null 
           ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) 
           : null,
