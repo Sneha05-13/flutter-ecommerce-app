@@ -6,6 +6,7 @@ import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -27,7 +28,7 @@ class SettingsScreen extends StatelessWidget {
                     
 
                     //--User Profile Card
-                    const RUserProfileTile(),
+                    RUserProfileTile(onPressed: () => Get.to(() => const ProfileScreen())),
                     const SizedBox(height: RSizes.spaceBtwSections),
                 ],
               ),
