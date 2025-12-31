@@ -26,7 +26,7 @@ class RCategoryTab extends StatelessWidget {
                 RBrandShowcase(images: [RImages.productImage7, RImages.productImage8, RImages.productImage9]),
 
                 //---Products
-                RSectionHeading(title: 'You might like', showActionButton: true, onPressed: (){}),
+                RSectionHeading(title: 'You might like', onPressed: (){}),
                 const SizedBox(height: RSizes.spaceBtwItems),
 
                 SGridLayout(itemCount: 4, itemBuilder: (_, index) => const SProductCardVertical()),

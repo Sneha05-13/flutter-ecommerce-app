@@ -66,8 +66,11 @@ class SProductCardVertical extends StatelessWidget {
           const SizedBox(height: RSizes.spaceBtwItems / 2),
           
           //---Details
-         Padding(
-          padding: const EdgeInsets.only(left: RSizes.sm),
+         const Padding(
+          padding: EdgeInsets.symmetric(horizontal: RSizes.sm),
+          //SizedBox is used to make Column full width
+          child: SizedBox(
+            width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -77,6 +80,7 @@ class SProductCardVertical extends StatelessWidget {
 
               
             ],
+          ),
           ),
          ),
          //---Spacer
