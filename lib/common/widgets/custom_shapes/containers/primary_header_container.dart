@@ -13,20 +13,19 @@ class RPrimaryHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RCurvedEdgeWidget(
-              child:  Container(
-              color: SColors.primary,
-              padding: const EdgeInsets.all(0),
-              child: SizedBox(
-                height: 400,
+                  child: Container(
+                   color: SColors.primary,
+              
                 child: Stack(
                 children: [
+                  //---Background Custom Shapes
                   Positioned(top: -150, right: -250, child: RCircularContainer(backgroundColor: SColors.textWhite.withAlpha(26))),
                   Positioned(top: 100, right: -300, child: RCircularContainer(backgroundColor: SColors.textWhite.withAlpha(26))),
                   child,
                 ],
               ),
             ),
-           ),
            );
+           
   }
 }
