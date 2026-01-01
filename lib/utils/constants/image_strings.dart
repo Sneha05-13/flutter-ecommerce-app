@@ -43,6 +43,11 @@ class RImages {
    //--Profile
    static const String user = "assets/user/user.png";
 
+   //--Product Review
+   static const String userProfileImage1 = "assets/reviews/profile_image1.png";
+   static const String userProfileImage2 = "assets/reviews/profile_image2.png";
+   static const String userProfileImage3 = "assets/reviews/profile_image3.png";
+
    //--Products
    static const String productImage1 = "assets/products_images/adidas_shoes1.png";
    static const String productImage2 = "assets/products_images/adidas_shoes2.png";
