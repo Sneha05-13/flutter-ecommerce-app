@@ -3,7 +3,9 @@ import 'package:ecommerce_app/common/widgets/custom_shapes/containers/primary_he
 import 'package:ecommerce_app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecommerce_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
+import 'package:ecommerce_app/features/personalization/screens/address/address.dart';
 import 'package:ecommerce_app/features/personalization/screens/profile/widgets/profile.dart';
+import 'package:ecommerce_app/features/shop/screens/order/order.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:ecommerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
@@ -43,9 +45,9 @@ class SettingsScreen extends StatelessWidget {
                   const RSectionHeading(title: 'Account Settings', showActionButton: false),
                   const SizedBox(height: RSizes.spaceBtwItems),
 
-                  const RSettingMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address'),
+                  RSettingMenuTile(icon: Iconsax.safe_home, title: 'My Addresses', subTitle: 'Set shopping delivery address', onTap: () => Get.to(() => const UserAddressScreen()),),
                   const RSettingMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout'),
-                  const RSettingMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'Pending and Completed Orders'),
+                  RSettingMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'Pending and Completed Orders', onTap: () => Get.to(() => const OrderScreen()),),
                   const RSettingMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account'),
                   const RSettingMenuTile(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List of all the discounted coupons'),
                   const RSettingMenuTile(icon: Iconsax.notification, title: 'Notification', subTitle: 'Set any kind of notification message'),
