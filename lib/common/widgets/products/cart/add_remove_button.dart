@@ -5,8 +5,8 @@ import 'package:ecommerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
-class RProductQuantityWithAddRemoval extends StatelessWidget {
-  const RProductQuantityWithAddRemoval({
+class RProductQuantityWithAddRemovalButton extends StatelessWidget {
+  const RProductQuantityWithAddRemovalButton({
     super.key,
   });
 

@@ -48,6 +48,13 @@ class RImages {
    static const String userProfileImage2 = "assets/reviews/profile_image2.png";
    static const String userProfileImage3 = "assets/reviews/profile_image3.png";
 
+   //--Payment Methods
+   static const String applePay = "assets/payment_method/applepay.png";
+   static const String googlePay = "assets/payment_method/googlepay.png";
+   static const String paypal = "assets/payment_method/paypal.png";
+   static const String paytm = "assets/payment_method/paytm.png";
+   static const String visa = "assets/payment_method/visa.png";
+
    //--Products
    static const String productImage1 = "assets/products_images/adidas_shoes1.png";
    static const String productImage2 = "assets/products_images/adidas_shoes2.png";

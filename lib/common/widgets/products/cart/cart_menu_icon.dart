@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/features/shop/screens/cart/widgets/cart.dart';
+import 'package:ecommerce_app/features/shop/screens/cart/cart.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
