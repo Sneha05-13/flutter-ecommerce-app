@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 class SValidator {
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {

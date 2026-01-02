@@ -26,24 +26,23 @@ class RBrandCard extends StatelessWidget {
                     onTap: onTap,
                       child:  SRoundedContainer(
                     padding: const EdgeInsets.all(RSizes.sm),
-                    showBorder: true,
+                    showBorder: showBorder,
                     backgroundColor: Colors.transparent,
                     child: Row(
                       children: [
                         //---Icon---
-                        Flexible(
-                          child: RCircularImage(
-                        isNetworkImage: false,
-                        image: RImages.clothIcon,
-                        backgroundColor: Colors.transparent,
-                        overlayColor: isdark ? SColors.white : SColors.black,
-                       ),
-                        ),
+                        RCircularImage(
+                                                isNetworkImage: false,
+                                                image: RImages.clothIcon,
+                                                backgroundColor: Colors.transparent,
+                                                overlayColor: isdark ? SColors.white : SColors.black,
+                                               ),
                        const SizedBox(width: RSizes.spaceBtwItems / 2),
 
                        //--Text
                        Expanded(
                        child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                          const SBrandTitleWithVerifiedIcon(title: 'Adidas', brandTextSize: TextSizes.large),

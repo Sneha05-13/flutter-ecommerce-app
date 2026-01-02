@@ -13,7 +13,7 @@ class AllBrandsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const SAppBar(title: Text('Brand'), showBackArrow: true),
+      appBar: SAppBar(title: Text('Brand'), showBackArrow: true),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(RSizes.defaultSpace),
