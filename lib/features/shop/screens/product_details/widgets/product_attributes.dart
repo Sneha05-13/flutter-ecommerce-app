@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/common/widgets/chips/choice_chip.dart';
 import 'package:ecommerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:ecommerce_app/common/widgets/products/products_card/product_price_text.dart';
+import 'package:ecommerce_app/common/widgets/texts/product_price_text.dart';
 import 'package:ecommerce_app/common/widgets/texts/product_title_text.dart';
 import 'package:ecommerce_app/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce_app/utils/constants/colors.dart';
