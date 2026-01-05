@@ -66,4 +66,8 @@ class RSizes {
 
   // Grid view spacing 
   static const double gridViewSpacing = 16.0;
+
+  static const double inputFieldVerticalPadding = 18.0;
+  static const double inputFieldHorizontalPadding = 12.0;
+
   }

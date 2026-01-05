@@ -1,20 +1,20 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'app.dart';
+
 
 //entry point of flutter app
 void main() async  {
+   WidgetsFlutterBinding.ensureInitialized();
 
-  // Todo:  Add widget binding
-  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  // Todo: Init local storage
-  // Todo: Await native splash
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  // Todo: Initialize Firebase
-  // Todo: Initialize Authentication
+   await Supabase.initialize(
+    url: 'https://zagsdirmepbezwwwdqxs.supabase.co',   //Supabase project URL
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InphZ3NkaXJtZXBiZXp3d3dkcXhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc1MjIyNDUsImV4cCI6MjA4MzA5ODI0NX0.2rFdpGxyhyPk46vfuN6T-ogI3fBs4tXbEyRxV1KDoys',  // Supabase anon
+   );
 
-  FlutterNativeSplash.remove();
-
+  
 
   runApp(const App());
 }
+
